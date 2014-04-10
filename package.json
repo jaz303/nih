@@ -16,7 +16,7 @@
     "url": "https://github.com/jaz303/nih/issues"
   },
   "homepage": "https://github.com/jaz303/nih",
-  "dependencies": {
+  "devDependencies": {
     "tape": "~2.12.3"
   }
 }
