@@ -9,7 +9,9 @@ function x(mod) {
     }
 }
 
-[   'mapValues',
+[   'all',
+	'any',
+	'mapValues',
     'append',
     'prepend',
     'pluck'

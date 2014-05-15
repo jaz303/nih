@@ -1,6 +1,46 @@
 var _       = require('..'),
     test    = require('tape');
 
+test('all', function(a) {
+
+    a.equal(
+        _.all(function(v) {
+            return v > 5
+        }, [6, 7, 8, 9, 10]),
+        true
+    );
+
+    a.equal(
+        _.all(function(v) {
+            return v > 5
+        }, [5, 6, 7, 8, 9, 10]),
+        false
+    );
+
+    a.end();
+
+});
+
+test('any', function(a) {
+
+    a.equal(
+        _.any(function(v) {
+            return v > 5
+        }, [1, 2, 3, 4, 5, 6]),
+        true
+    );
+
+    a.equal(
+        _.all(function(v) {
+            return v > 5
+        }, [1, 2, 3, 5, 6]),
+        false
+    );
+
+    a.end();
+
+});
+
 test('auto curry 1', function(a) {
 
     function add4(a, b, c, d) {
