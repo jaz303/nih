@@ -41,6 +41,32 @@ var _       = require('..'),
 
 // });
 
+test('curry', function(a) {
+
+    function add3(a, b, c) {
+        return a + b + c;
+    }
+
+    var fn = _.curry(add3, 1, 2);
+
+    a.equal(fn(3), 6);
+    a.end();
+
+});
+
+test('curryArray', function(a) {
+
+    function add3(a, b, c) {
+        return a + b + c;
+    }
+
+    var fn = _.curryArray(add3, [1, 2]);
+
+    a.equal(fn(3), 6);
+    a.end();
+
+});
+
 test('auto curry 1', function(a) {
 
     function add4(a, b, c, d) {
