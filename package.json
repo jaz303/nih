@@ -4,7 +4,7 @@
   "description": "Utility library",
   "main": "index.js",
   "scripts": {
-    "test": "set -e; for t in test/*.js; do node $t; done"
+    "test": "set -e; for t in $(find test -name '*.js'); do node $t; done"
   },
   "repository": {
     "type": "git",
