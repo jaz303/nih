@@ -23,3 +23,10 @@ test('math', function(assert) {
     assert.end();
 
 });
+
+test('sum', function(assert) {
+
+    assert.equal(_.sum([1,2,3,4,5]), 15);
+    assert.end();
+
+});
