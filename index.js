@@ -11,3 +11,11 @@
         exports[k] = lib[k];
     }
 });
+
+exports.globalize = function() {
+    for (var k in exports) {
+        if (k !== 'globalize') {
+            global[k] = exports[k];
+        }
+    }
+}
