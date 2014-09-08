@@ -30,3 +30,19 @@ test('sum', function(assert) {
     assert.end();
 
 });
+
+test('isOdd', function(assert) {
+
+    assert.ok(_.isOdd(1));
+    assert.notOk(_.isOdd(10));
+    assert.end();
+
+});
+
+test('isEven', function(assert) {
+
+    assert.ok(_.isEven(10));
+    assert.notOk(_.isEven(121413));
+    assert.end();
+
+});
