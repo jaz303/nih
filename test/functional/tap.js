@@ -1,24 +1,17 @@
 var test = require('tape');
 var tap = require('../..').tap;
 
-test("tap - calls cb for each element", function(assert) {
+test("tap - calls cb once and returns self", function(assert) {
 
-    var sum = 0;
-    tap(function(x) {
-        sum += x;
-    }, [1, 2, 3, 4, 5]);
+    var x = 0;
+    var input = [1,2,3,4];
 
-    assert.equal(sum, 15);
-    assert.end();
+    var output = tap(function() {
+        x++;
+    }, input);
 
-});
-
-test("tap - returns original collection", function(assert) {
-
-    var ary = [1, 2, 3];
-    var out = tap(function() {}, ary);
-
-    assert.equal(ary, out);
+    assert.equal(x, 1);
+    assert.equal(input, output);
     assert.end();
 
 });
