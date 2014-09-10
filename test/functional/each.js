@@ -1,6 +1,16 @@
 var test = require('tape');
 var each = require('../..').each;
 
+test("each - returns self", function(assert) {
+
+    var ary = [1,2,3,4];
+    var res = each(function() {}, ary);
+
+    assert.equal(ary, res);
+    assert.end();
+
+});
+
 test("each - array", function(assert) {
 
     var out = [];
